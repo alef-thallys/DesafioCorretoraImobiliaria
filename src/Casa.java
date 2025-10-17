@@ -1,6 +1,6 @@
 public class Casa extends Imovel {
 	
-	public Casa(Long id, String endereco, String numero, boolean alugado, int valorAluguel, Proprietario proprietario) {
+	public Casa(Long id, String endereco, int numero, boolean alugado, int valorAluguel, Proprietario proprietario) {
 		super(id, endereco, numero, alugado, valorAluguel, proprietario);
 	}
 	

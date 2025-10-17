@@ -1,12 +1,12 @@
 abstract class Imovel {
 	private Long id;
 	protected String endereco;
-	protected String numero;
+	protected int numero;
 	protected boolean alugado;
 	private int valorAluguel;
 	private Proprietario proprietario;
 	
-	public Imovel(Long id, String endereco, String numero, boolean alugado, int valorAluguel, Proprietario proprietario) {
+	public Imovel(Long id, String endereco, int numero, boolean alugado, int valorAluguel, Proprietario proprietario) {
 		this.id = id;
 		this.endereco = endereco;
 		this.numero = numero;
@@ -15,7 +15,7 @@ abstract class Imovel {
 		this.proprietario = proprietario;
 	}
 	
-	public Imovel(Long id, String endereco, String numero, boolean alugado, int valorAluguel) {
+	public Imovel(Long id, String endereco, int numero, boolean alugado, int valorAluguel) {
 		this.id = id;
 		this.endereco = endereco;
 		this.numero = numero;
@@ -30,7 +30,7 @@ abstract class Imovel {
 		return alugado;
 	}
 	
-	public String contatoProprietario() {
+	public long contatoProprietario() {
 		return proprietario.getTelefone();
 	}
 	
@@ -54,15 +54,15 @@ abstract class Imovel {
 		this.endereco = endereco;
 	}
 	
-	public String getNumero() {
+	public int getNumero() {
 		return numero;
 	}
 	
-	public void setNumero(String numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 	
-	public boolean estaAlugadoStatus() {
+	public boolean isAlugado() {
 		return alugado;
 	}
 	
@@ -88,7 +88,7 @@ abstract class Imovel {
 	
 	@Override
 	public String toString() {
-		if (estaAlugadoStatus()) {
+		if (isAlugado()) {
 			return "id=" + id +
 					", endereco=" + endereco +
 					", numero=" + numero +
